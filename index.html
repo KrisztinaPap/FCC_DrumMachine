@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>FreeCodeCamp's Drum Machine Challenge</title>
+        <meta charset="UTF-8" />
+        <meta lang="EN" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous"
+        />
+        <link href="src/styles.css" rel="stylesheet" type="text/css"></link>
+    </head>
+
+    <body>
+        
+        <div id="drum-machine" class="container">
+            <h1 class="text-center m-2">FreeCodeCamp's Drum Machine Challenge</h1>
+            <div id="drum-pad" class="row m-2">
+                <button id="bird" type="button" class="drum-pad col m-1 btn btn-lg btn-success" onclick="document.getElementById('Q').play(); document.getElementById('display').innerHTML = 'Bird (Q)';">
+                    <audio class="clip" id="Q" src="assets/Birds-tweet.mp3" type="audio/mpeg"></audio>
+                    Bird (Q)
+                </button>
+                <button id="sheep" type="button" class="drum-pad col m-1 btn btn-lg btn-success" onclick="document.getElementById('W').play(); document.getElementById('display').innerHTML = 'Sheep (W)';">
+                    <audio class="clip" id="W" src="assets/Bleating-sheep.mp3" type="audio/mpeg"></audio>
+                    Sheep (W)
+                </button>
+                <button id="cat" type="button" class="drum-pad col m-1 btn btn-lg btn-success" onclick="document.getElementById('E').play(); document.getElementById('display').innerHTML = 'Cat (E)';">
+                    <audio class="clip" id="E" src="assets/Cat-meow-audio-clip.mp3" type="audio/mpeg"></audio>
+                    Cat (E)
+                </button>
+                <button id="rooster" type="button" class="drum-pad col m-1 btn btn-lg btn-success" onclick="document.getElementById('A').play(); document.getElementById('display').innerHTML = 'Rooster (A)';">
+                    <audio class="clip" id="A" src="assets/Cockadoodledoo-sound.mp3" type="audio/mpeg"></audio>
+                    Rooster (A)
+                </button>
+                <button id="dog" type="button" class="drum-pad col m-1 btn btn-lg btn-success" onclick="document.getElementById('S').play(); document.getElementById('display').innerHTML = 'Dog (S)';">
+                    <audio class="clip" id="S" src="assets/Dog-woof-single-sound.mp3" type="audio/mpeg"></audio>
+                    Dog (S)
+                </button>
+                <button id="frog" type="button" class="drum-pad col m-1 btn btn-lg btn-success" onclick="document.getElementById('D').play(); document.getElementById('display').innerHTML = 'Frog (D)';">
+                    <audio class="clip" id="D" src="assets/Frog-sound-ribbit.mp3" type="audio/mpeg"></audio>
+                    Frog (D)
+                </button>
+                <button id="goat" type="button" class="drum-pad col m-1 btn btn-lg btn-success" onclick="document.getElementById('Z').play(); document.getElementById('display').innerHTML = 'Goat (Z)';">
+                    <audio class="clip" id="Z" src="assets/Goat-noise.mp3" type="audio/mpeg"></audio>
+                    Goat (Z)
+                </button>
+                <button id="cow" type="button" class="drum-pad col m-1 btn btn-lg btn-success" onclick="document.getElementById('X').play(); document.getElementById('display').innerHTML = 'Cow (X)';">
+                    <audio class="clip" id="X" src="assets/Single-cow-moo.mp3" type="audio/mpeg"></audio>
+                    Cow (X)
+                </button>
+                <button id="wolf" type="button" class="drum-pad col m-1 btn btn-lg btn-success" onclick="document.getElementById('C').play(); document.getElementById('display').innerHTML = 'Wolf (C)';">
+                    <audio class="clip" id="C" src="assets/Wolf-howls.mp3" type="audio/mpeg"></audio>
+                    Wolf (C)
+                </button>
+            </div> <!------------- end of drum-pad container -------------->  
+            <div id="display" class="card display-1 text-center">Choose a sound!
+            </div> <!------------- end of display container -------------->
+        </div> <!------------- end of drum-machine container -------------->
+        <footer class="fixed-bottom text-center p-3">
+            <small>&copy; Copyright 2020, KriszDev</small>
+        </footer>
+<!--        <script src="src/index.js" type="text/javascript"></script>-->
+        <script>
+             document.addEventListener("keydown", event => {
+                switch (event.keyCode) {
+                case 81:
+                    var birdSound = new Audio('assets/Birds-tweet.mp3');
+                    birdSound.play();
+                    document.getElementById('display').innerHTML = "Bird (Q)";
+                    break;
+                case 87:
+                    var sheepSound = new Audio('assets/Bleating-sheep.mp3');
+                    sheepSound.play();
+                    document.getElementById('display').innerHTML = "Sheep (W)";
+                    break;
+                case 69:
+                    var catSound = new Audio('assets/Cat-meow-audio-clip.mp3');
+                    catSound.play();
+                    document.getElementById('display').innerHTML = "Cat (E)";
+                    break;
+                case 65:
+                    var roosterSound = new Audio('assets/Cockadoodledoo-sound.mp3');
+                    roosterSound.play();
+                    document.getElementById('display').innerHTML = "Rooster (A)";
+                    break;
+                case 83:
+                    var dogSound = new Audio('assets/Dog-woof-single-sound.mp3');
+                    dogSound.play();
+                    document.getElementById('display').innerHTML = "Dog (S)";
+                    break;
+                case 68:
+                    var frogSound = new Audio('assets/Frog-sound-ribbit.mp3');
+                    frogSound.play();
+                    document.getElementById('display').innerHTML = "Frog (D)";
+                    break;
+                case 90:
+                    var goatSound = new Audio('assets/Goat-noise.mp3');
+                    goatSound.play();
+                    document.getElementById('display').innerHTML = "Goat (Z)";
+                    break;
+                case 88:
+                    var cowSound = new Audio('assets/Single-cow-moo.mp3');
+                    cowSound.play();
+                    document.getElementById('display').innerHTML = "Cow (X)";
+                    break;
+                case 67:
+                    var wolfSound = new Audio('assets/Wolf-howls.mp3');
+                    wolfSound.play();
+                    document.getElementById('display').innerHTML = "Wolf (C)";
+                    break;
+                default:
+                    console.log("default case");
+                    break;
+                }
+            });
+        </script>
+    </body>
+</html>
