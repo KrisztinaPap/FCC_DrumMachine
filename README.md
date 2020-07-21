@@ -12,6 +12,8 @@ I watched several tutorials on this project on YouTube and they all used React. 
 - Plays animal sounds when you click on or press specific buttons 
 - When sound plays, a display shows what animal it is
 
+## References
+
 [FreeCodeCamp tutorials and challenge](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-drum-machine)
 
 [Adam Pritchard's Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
